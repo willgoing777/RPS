@@ -10,7 +10,7 @@ class Weapon:
     # randomly set its attack base on the given level
     def __init__(self, level):
         self.level = level
-        self.attack = rand.randrange(level*10 + 1, (level+1)*10)
+        self.attack = level*10 + rand.randrange(5, 10)
 
 # Plate class
 class Plate:
@@ -21,7 +21,7 @@ class Plate:
     # randomly set its armor base on the given level
     def __init__(self, level):
         self.level = level
-        self.armor = rand.randrange(level*10 + 1, (level+1)*10)
+        self.armor = rand.randrange(0, level+1) + level
 
 # Player class
 class Player:
@@ -81,7 +81,7 @@ class Dungeon:
     def __init__(self, level):
         self.level = level
         self.Monster_HP = rand.randrange(level * 10 + 1, (level+1) * 10)
-        self.attack = rand.randrange(level * 10 + 1, (level+1) * 10)
+        self.attack = rand.randrange(0, level+1) + level * 2
         num_loots_weapons = rand.randrange(1, level+2)
         num_loots_plates = rand.randrange(1, level+2)
 

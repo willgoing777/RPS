@@ -448,7 +448,7 @@ while start:
                 screen.blit(top_hint, (400 - w1 / 2, 10))
                 if monster_RPS.value == 0:
                     screen.blit(rock_img, (620, 200))
-                elif choosed_RPS.value == 1:
+                elif monster_RPS.value == 1:
                     screen.blit(paper_img, (620, 200))
                 else:
                     screen.blit(scissor_img, (620, 200))
